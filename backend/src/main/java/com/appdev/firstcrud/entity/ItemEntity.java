@@ -1,41 +1,49 @@
 @Entity
-@Table(name="item")
+@Table(name = "item")
 public class ItemEntity {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int itemid;
-	private String name;
-	private String unit;
-	private float price;
 
-	public ItemEntity() {
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int itemid;
+    
+    private String name;
+    private String unit;
+    private float price;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public ItemEntity() {
+        // Default constructor required by JPA
+        // Intentionally left blank
+    }
 
-	public void setUnit(String unit) {
-		this.unit = unit;
-	}
+    public void setItemid(int itemid) {
+        this.itemid = itemid;
+    }
 
-	public void setPrice(float price) {
-		this.price = price;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getItemid() {
-		return itemid;
-	}
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setPrice(float price) {
+        this.price = price;
+    }
 
-	public String getUnit() {
-		return unit;
-	}
+    public int getItemid() {
+        return itemid;
+    }
 
-	public float getPrice() {
-		return price;
-	}
+    public String getName() {
+        return name;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public float getPrice() {
+        return price;
+    }
 }
